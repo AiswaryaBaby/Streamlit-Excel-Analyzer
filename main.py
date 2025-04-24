@@ -29,18 +29,18 @@ if action_plan_file is not None:
 if engagement_file is not None and action_plan_file is not None:
     
     # Dropdown for BUHR Name
-    buhr_name = st.selectbox('Select BUHR Name:', engagement_data['BUHR Name'].unique())
+    buhr_name = st.selectbox('Select BUHR NAME:', engagement_data['BUHR NAME'].unique())
 
     # Dropdown for Department
     department_name = st.selectbox('Select Department:', engagement_data['Department'].unique())
 
     # Dropdown for BUHead Name
-    buhead_name = st.selectbox('Select BUHead Name:', engagement_data['BUHead Name'].unique())
+    buhead_name = st.selectbox('Select BUHEAD NAME:', engagement_data['BUHEAD NAME'].unique())
 
     # Filter the engagement data based on the selections
-    filtered_data = engagement_data[(engagement_data['BUHR Name'] == buhr_name) & 
+    filtered_data = engagement_data[(engagement_data['BUHR NAME'] == buhr_name) & 
                                     (engagement_data['Department'] == department_name) & 
-                                    (engagement_data['BUHead Name'] == buhead_name)]
+                                    (engagement_data['BUHEAD NAME'] == buhead_name)]
 
     st.write(f"Displaying data for {buhr_name} in {department_name} led by {buhead_name}")
     st.write(filtered_data)
