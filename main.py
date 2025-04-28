@@ -3,6 +3,43 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #E3F2FD; /* Light blue background */
+        color: #212121; /* Dark gray text */
+        font-family: sans-serif;
+    }
+    .st-header {
+        background-color: #1976D2; /* Primary blue header */
+        color: white;
+    }
+    .st-subheader {
+        color: #1976D2; /* Primary blue subheader */
+    }
+    .st-button button {
+        background-color: #1976D2 !important;
+        color: white !important;
+        border-color: #1976D2 !important;
+    }
+    .st-button button:hover {
+        background-color: #1565C0 !important; /* Darker blue on hover */
+        color: white !important;
+        border-color: #1565C0 !important;
+    }
+    /* Add more CSS rules to target other elements */
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+st.title("My Blue Themed App")
+st.subheader("This is a subheader.")
+st.button("Click Me")
+# ... your other Streamlit components ...
+
+
 # Title of the app
 st.title('Employee Engagement Data Analysis')
 
